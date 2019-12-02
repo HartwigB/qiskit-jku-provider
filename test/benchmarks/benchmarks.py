@@ -31,18 +31,11 @@ class QasmSimulatorJKUBenchmarkSuite:
     def time_qasm_simulator_single_shot(self):
         """Test single shot run."""
         result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=1).result()
-        self.assertEqual(result.success, True)
+        assert(result.success)
 
     def time_qasm_simulator(self):
         """Test data counts output for single circuit run against reference."""
         shots = 1024
         result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=shots).result()
-        self.assertEqual(result.success, True)
-            #threshold = 0.04 * shots
-            #counts = result.get_counts('test')
-            #target = {'100 100': shots / 8, '011 011': shots / 8,
-            #          '101 101': shots / 8, '111 111': shots / 8,
-            #          '000 000': shots / 8, '010 010': shots / 8,
-            #          '110 110': shots / 8, '001 001': shots / 8}
-            #self.assertDictAlmostEqual(counts, target, threshold)
+        assert(result.success)
 
