@@ -27,7 +27,7 @@ else:
 
 
 from ._random_circuit_generator import RandomCircuitGenerator
-from .common import QiskitTestCase
+from ..common import QiskitTestCase
 
 
 @unittest.skipIf(_skip_class, 'JKU C++ simulator unavailable')

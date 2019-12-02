@@ -51,6 +51,26 @@ job = execute(qc, backend=jku_backend)
 result = job.result()
 print(result.get_counts(qc))
 ```
+
+## Installation from SRC
+
+This provider can also be installed from source. The following steps are necessary:
+
+```
+mkdir build
+cd    build
+cmake ..
+make 
+```
+
+## Testing
+
+There are also tests implemented that can be executed automatically with:
+
+```
+make test
+```
+
 ## Contribution Guidelines
 
 If you'd like to contribute to the JKU simulator, please take a look at our

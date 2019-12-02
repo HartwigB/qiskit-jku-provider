@@ -266,6 +266,9 @@ DEFAULT_SIMULATOR_PATHS = [
     os.path.abspath(os.path.join(os.path.dirname(__file__),
                                  '../build/lib/qiskit_jku_provider/jku_simulator'
                                  + EXTENSION)),
+    os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                 '../build/jku_simulator'
+                                 + EXTENSION)),
     # This is the path where PIP installs the simulator
     os.path.abspath(os.path.join(os.path.dirname(__file__),
                                  'jku_simulator' + EXTENSION)),
@@ -297,6 +300,7 @@ class QasmSimulator(BaseBackend):
         'n_qubits': 30,
         'conditional': False,
         'max_shots': 100000,
+        'coupling_map': None,
         'open_pulse': False,
         'gates': [
             {
