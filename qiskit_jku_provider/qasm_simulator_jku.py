@@ -290,7 +290,7 @@ class QasmSimulator(BaseBackend):
 
     DEFAULT_CONFIGURATION = {
         'backend_name': 'qasm_simulator',
-        'backend_version': "1.0",
+        'backend_version': VERSION,
         'url': 'https://github.com/Qiskit/qiskit-jku-provider',
         'simulator': True,
         'local': True,
