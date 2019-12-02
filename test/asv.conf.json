@@ -8,7 +8,7 @@
 
     // The project's homepage
     // "project_url": "https://github.com/Qiskit/qiskit-jku-provider",
-    "project_url": "https://github.com/HartwigB/qiskit-jku-provider.git"
+    "project_url": "https://github.com/HartwigB/qiskit-jku-provider.git",
 
     // The URL or local path of the source code repository for the
     // project being benchmarked
