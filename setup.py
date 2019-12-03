@@ -98,7 +98,8 @@ setup(
     author_email="qiskit@us.ibm.com",
     description="Qiskit simulator whose backend is based on JKU's simulator",
     long_description = "This module contains [Qiskit](https://www.qiskit.org/) simulator whose backend is written in JKU's simulator. This simulator simulate a Quantum circuit on a classical computer.",
-    url="https://github.com/Qiskit/qiskit-jku-provider",
+    #url="https://github.com/Qiskit/qiskit-jku-provider",
+    url="https://github.com/HartwigB/qiskit-jku-provider.git",
     license="Apache 2.0",
     classifiers=[
         "Environment :: Console",
