@@ -7,7 +7,6 @@
 
 # pylint: disable=missing-docstring,redefined-builtin
 
-import unittest
 import os
 
 from qiskit              import QuantumCircuit
