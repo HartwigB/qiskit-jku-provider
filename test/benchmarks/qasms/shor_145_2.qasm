@@ -1,13 +1,5 @@
 OPENQASM 2.0;
 include "qelib1.inc";
-gate ccu1(lambda) a,b,c {
-  cu1(lambda/2) a,b;
-  ccx a,b,c;
-  u1(-lambda/2) c;
-  ccx a,b,c;
-  u1(lambda/2) c;
-}
-
 qreg q[34];
 creg c[16];
 x q[23];
