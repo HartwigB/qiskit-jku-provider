@@ -17,38 +17,23 @@ from qiskit_jku_provider import QasmSimulator
 
 
 class QasmSimulatorJKUBenchmarkSuite:
-    def time_range(self, n):
-        for i in range(10000):
-            pass
     """Runs the Basic qasm_simulator tests from Terra on JKU."""
     params = ["3_17_13.qasm", "4_49_16.qasm", "4gt4-v0_72.qasm"]
     
     def setup(self, filename):
-        self.seed    = 88
-        self.backend = QasmSimulator(silent=True)
-        full_file    = os.path.join(os.path.dirname(__file__), 'qasms', filename)
-        self.circuit = QuantumCircuit.from_qasm_file(full_file)
+        self.seed         = 88
+        self.backend      = QasmSimulator(silent=True)
+        full_file         = os.path.join(os.path.dirname(__file__), 'qasms', filename)
+        self.circuit      = QuantumCircuit.from_qasm_file(full_file)
         self.circuit.name = filename
            
-
-    def time_qasm_simulator_single_shot(self, n):
+    def time_qasm_simulator_single_shot(self, parameter):
         """Test single shot run."""
         result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=1).result()
         assert(result.success)
 
-    def time_qasm_simulator(self):
+    def time_qasm_simulator(self, parameter):
         """Test data counts output for single circuit run against reference."""
         shots = 1024
         result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=shots).result()
         assert(result.success)
-
-def test_():
-    print("TEST")
-    s = QasmSimulatorJKUBenchmarkSuite()
-    s.setup("3_17_13.qasm")
-    s.time_qasm_simulator_single_shot("3_17_13.qasm")
-    
-
-if __name__ == '__main__':
-    print("main")
-    test_()
