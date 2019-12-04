@@ -18,7 +18,7 @@ from qiskit_jku_provider import QasmSimulator
 
 class QasmSimulatorJKUBenchmarkSuite:
     """Runs the Basic qasm_simulator tests from Terra on JKU."""
-    params = ["3_17_13.qasm", "4_49_16.qasm", "4gt4-v0_72.qasm"]
+    params = ["grover_12.qasm", "shor_145_2.qasm", "shor_155_2.qasm", "shor_159_2.qasm", "shor_161_2.qasm"]
     
     def setup(self, filename):
         self.seed         = 88
