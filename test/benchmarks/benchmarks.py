@@ -21,7 +21,7 @@ class QasmSimulatorJKUBenchmarkSuite:
         for i in range(10000):
             pass
     """Runs the Basic qasm_simulator tests from Terra on JKU."""
-    params = ["3_17_13.qasm"]#, "4_49_16.qasm", "4gt4-v0_72.qasm"]
+    params = ["3_17_13.qasm", "4_49_16.qasm", "4gt4-v0_72.qasm"]
     
     def setup(self, filename):
         self.seed    = 88
@@ -34,20 +34,19 @@ class QasmSimulatorJKUBenchmarkSuite:
     def time_qasm_simulator_single_shot(self, n):
         """Test single shot run."""
         result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=1).result()
-        return result
-        #assert(result.success)
+        assert(result.success)
 
-    #def time_qasm_simulator(self):
-    #    """Test data counts output for single circuit run against reference."""
-        #shots = 1024
-        #result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=shots).result()
-        #assert(result.success)
+    def time_qasm_simulator(self):
+        """Test data counts output for single circuit run against reference."""
+        shots = 1024
+        result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=shots).result()
+        assert(result.success)
 
 def test_():
     print("TEST")
     s = QasmSimulatorJKUBenchmarkSuite()
     s.setup("3_17_13.qasm")
-    print(s.time_qasm_simulator_single_shot("3_17_13.qasm"))
+    s.time_qasm_simulator_single_shot("3_17_13.qasm")
     
 
 if __name__ == '__main__':
