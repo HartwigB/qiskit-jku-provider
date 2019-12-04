@@ -43,8 +43,13 @@ class QasmSimulatorJKUBenchmarkSuite:
         #result = execute(self.circuit, self.backend, seed_transpiler=34342, shots=shots).result()
         #assert(result.success)
 
-if __name__ == '__main__':
-    print("main")
+def test_():
+    print("TEST")
     s = QasmSimulatorJKUBenchmarkSuite()
     s.setup("3_17_13.qasm")
     print(s.time_qasm_simulator_single_shot("3_17_13.qasm"))
+    
+
+if __name__ == '__main__':
+    print("main")
+    test_()
