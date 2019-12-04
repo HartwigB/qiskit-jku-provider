@@ -283,7 +283,6 @@ VERSION_PATHS = [
     os.path.abspath(os.path.join(os.path.dirname(__file__), "VERSION.txt")),
 ]
 
-VERSION = "1.0.0"
 for version_path in VERSION_PATHS:
     if os.path.exists(version_path):
         with open(version_path, "r") as version_file:
