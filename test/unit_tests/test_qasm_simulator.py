@@ -10,7 +10,7 @@
 import unittest
 import os
 from qiskit import QuantumCircuit
-from ..common import QiskitTestCase
+from .common import QiskitTestCase
 from qiskit_jku_provider import QasmSimulator
 from qiskit import execute
 

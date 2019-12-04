@@ -11,7 +11,7 @@ from qiskit.circuit import QuantumCircuit, QuantumRegister, ClassicalRegister
 from qiskit import execute
 from qiskit_jku_provider import QasmSimulator
 
-from ..common import QiskitTestCase
+from .common import QiskitTestCase
 
 
 class JKUBackendTestCase(QiskitTestCase):

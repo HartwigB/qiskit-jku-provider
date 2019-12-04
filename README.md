@@ -57,18 +57,27 @@ print(result.get_counts(qc))
 This provider can also be installed from source. The following steps are necessary:
 
 ```
-mkdir build
-cd    build
-cmake ..
-make 
+python setup.py build
+
+or 
+
+make dist
 ```
 
 ## Testing
 
-There are also tests implemented that can be executed automatically with:
+There are also unit tests implemented that can be executed automatically with:
 
 ```
 make test
+```
+
+Furthermore, air speed velocity can be used to benchmark the repository.
+It can be invoked with:
+
+```
+cd test
+asv run
 ```
 
 ## Contribution Guidelines

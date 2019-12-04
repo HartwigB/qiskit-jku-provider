@@ -11,7 +11,7 @@ import unittest
 from qiskit import QuantumCircuit, QuantumRegister
 from qiskit import execute
 
-from ..common import QiskitTestCase
+from .common import QiskitTestCase
 from qiskit_jku_provider import QasmSimulator
 
 

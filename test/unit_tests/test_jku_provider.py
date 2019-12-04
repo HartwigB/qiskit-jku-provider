@@ -9,7 +9,7 @@
 
 from qiskit_jku_provider import JKUProvider
 
-from ..common import QiskitTestCase
+from .common import QiskitTestCase
 
 
 class JKUProviderTestCase(QiskitTestCase):
