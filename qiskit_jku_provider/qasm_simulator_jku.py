@@ -150,7 +150,9 @@ class JKUSimulatorWrapper:
         self.set_config(config, experiment.config)
         # do this before running so we can output warning to the user as soon as possible if needed
         measurement_data = self.compute_measurement_data(experiment)
-        with open("./qelib1.inc", "w") as qelib_file:
+        
+        cwd = os.getcwd() 
+        with open(os.path.join(cwd, "qelib1.inc"), "w") as qelib_file:
             qelib_file.write(qelib1)
         self.start_time = time.time()
         qasm = self.convert_qobj_circuit_to_jku_qasm(experiment)
