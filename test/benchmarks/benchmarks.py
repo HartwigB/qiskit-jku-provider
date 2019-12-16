@@ -19,7 +19,7 @@ from qiskit_jku_provider import QasmSimulator
 class QasmSimulatorJKUBenchmarkSuite:
     """Runs the Basic qasm_simulator tests from Terra on JKU."""
     params = ["grover_12.qasm", "shor_145_2.qasm", "shor_155_2.qasm", "shor_159_2.qasm", "shor_161_2.qasm"]
-    timeout = 60
+    timeout = 180
     
     def setup(self, filename):
         self.seed         = 88
